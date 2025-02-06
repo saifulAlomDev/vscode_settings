@@ -1,0 +1,108 @@
+====================================================================
+====================================================================
+
+
+====================================================================
+javascript
+====================================================================
+
+{
+	"Print to console": {
+		"prefix": "clg",
+		"body": [
+			"console.log($1);"
+		],
+		"description": "Log output to console"
+	},
+	"While Loop": {
+		"prefix": "while",
+		"body": [
+			"while (${1:condition}) {",
+			"    ${2:console.log('Looping');}",
+			"}"
+		],
+		"description": "Creates a while loop"
+	},
+	"Require Statement": {
+		"prefix": "rqr",
+		"body": [
+			"require('$1');"
+		],
+		"description": "Require a module"
+	},
+	"Module Exports": {
+		"prefix": "mexp",
+		"body": [
+			"module.exports = $1;"
+		],
+		"description": "Export a module"
+	},
+	"universal_response": {
+		"prefix": "cmt",
+		"body": [
+			"/*=====================================",
+			"${1:Oops, not found}",
+			"=======================================*/",
+		],
+		"description": "Comment"
+	}
+}
+
+
+====================================================================
+settings
+====================================================================
+
+{
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.CustomBrowser": "chrome",
+
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "git.autofetch": true,
+  "code-runner.runInTerminal": true,
+
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "terminal.integrated.profiles.windows": {
+    "Git Bash": {
+      "path": ["C:\\Program Files\\Git\\bin\\bash.exe"]
+    }
+  },
+
+  "editor.suggest.showWords": false,
+  "github.copilot.enable": {
+    "*": false
+  },
+  "workbench.colorTheme": "Default Dark+",
+  "window.menuBarVisibility": "compact",
+  "files.autoSave": "afterDelay",
+  "[snippets]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  }
+}
+
+
+
+
+====================================================================
+====================================================================
+
