@@ -99,7 +99,7 @@ settings
   "editor.formatOnSave": true,
 
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -108,10 +108,10 @@ settings
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[javascriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -135,8 +135,15 @@ settings
   "files.autoSave": "afterDelay",
   "[snippets]": {
     "editor.defaultFormatter": "vscode.json-language-features"
-  }
+  },
+  "files.associations": {
+    "*.js": "javascript",
+    "*.jsx": "javascriptreact"
+  },
+  "editor.unicodeHighlight.nonBasicASCII": false,
+  "security.workspace.trust.untrustedFiles": "open"
 }
+
 
 
 
