@@ -5,12 +5,11 @@
 ====================================================================
 javascript
 ====================================================================
-
 {
 	"Print to console": {
 		"prefix": "clg",
 		"body": [
-			"console.log($1);"
+			"console.log($1)"
 		],
 		"description": "Log output to console"
 	},
@@ -26,7 +25,7 @@ javascript
 	"Require Statement": {
 		"prefix": "rqr",
 		"body": [
-			"require('$1');"
+			"const ${2:ComponentName} = require('${1:ComponentName}');"
 		],
 		"description": "Require a module"
 	},
@@ -45,7 +44,46 @@ javascript
 			"=======================================*/",
 		],
 		"description": "Comment"
-	}
+	},
+
+		"backEnd": {
+		  "prefix": "backendproject",
+		  "body": [
+			"const express = require('express');",
+			"const cors = require('cors');",
+			"const dotenv = require('dotenv');",
+			"const helmet = require('helmet'); // Security middleware",
+			"",
+			"dotenv.config();",
+			"",
+			"const app = express();",
+			"",
+			"// Apply security middleware",
+			"app.use(helmet());",
+			"",
+			"// CORS setup",
+			"app.use(cors({ origin: 'https://yourfrontenddomain.com' }));",
+			"",
+			"// Middleware to parse JSON and URL-encoded data",
+			"app.use(express.json());",
+			"app.use(express.urlencoded({ extended: true }));",
+			"",
+			"// Add routes, database connection, etc.",
+			"// app.use('/api/v1.0.0/users', userRouter);",
+			"",
+			"// Default 404 route",
+			"app.use('*', (_, res) => res.status(404).json({ message: 'Not Found' }));",
+			"",
+			"// Server setup",
+			"const port = process.env.PORT || 5000;",
+			"app.listen(port, () => {",
+			"  console.log(`Server is running on http://localhost:${port}`);",
+			"});"
+		  ],
+		  "description": "Backend project setup with express, cors, dotenv, and helmet"
+		}
+	  
+	  
 }
 
 
